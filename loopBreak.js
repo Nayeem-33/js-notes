@@ -10,7 +10,7 @@ while (num <= 200) {    // Still we can limit loop by condition here we have lim
   num++;                // This will add 1 after the number gets print we can also write this in 3 ways  
                         // num = num + 1; or num += 1; or num++;
 
-  if (num > 100) {      // to use break we can use if ad break is a statement not a function.
+  if (num > 100) {      // to use break we can use if as break is a statement not a function.
     break;              // we can use break statement to break the loop after 100
   }
 }
