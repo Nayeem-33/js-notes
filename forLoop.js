@@ -73,3 +73,18 @@ for(let w = 50; w <= 85; w++) {
 
 
 // Task 4 = Generate a multiplication table for number 9
+
+let numMul = 9;
+
+for(let d = 1; d <= 10; d++) {
+    // console.log(numMul + 'X' + d + '=' + (numMul*d) )
+}
+
+
+
+
+// Task 5 = Implement a countdown timer that counts down from 81 to 65.
+
+for(let t = 81; t >= 65; t--) {
+    // console.log(t)
+}
