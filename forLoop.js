@@ -16,7 +16,7 @@ for(let x = 60; x <= 100; x++) {
         continue;
     }
 
-    // console.log(x)
+    console.log(x)
 }
 
 
@@ -48,7 +48,7 @@ for(let z = 90; z <= 129; z++) {
     
     sum = sum + z;
     
-    // console.log(sum)
+    console.log(sum)
 }
 
 
