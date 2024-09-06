@@ -35,8 +35,21 @@ let countU = A.split("U").length - 1;
 
 // Hint: You should be able to check whether x or X exists. After that, search online how to replace a character in a string.
 
+let str = "eXample text with multiple X and x characters.";     // Sample Sentence
+
+if(str.includes('x') || str.includes('X')){                     // if condition to look for sample sentence includes 'x' or 'X'
+
+    let newSrt = str.replace(/x/g, 'y').replace(/X/g, 'Y');     // we called newStr and replaced the 'x' & 'X' with 'y' & 'Y'
+                                                                // here 'g' stands for "global" it will replace all the letters not just first one.
+    console.log(newSrt)
+}
 
 
+
+let newSrt = str.replace(/x/g, 'y').replace(/X/g, 'Y');         // we called newStr and replaced the 'x' & 'X' with 'y' & 'Y'
+                                                                // here 'g' stands for "global" it will replace all the letters not just first one.
+                                                                
+console.log(newSrt)
 
 
 
@@ -56,6 +69,7 @@ for(let f = 0; f < strAr.length; f++) {                         // for loop for 
                                                                 // .substr(1) method is used to extracting portion from specific index of a string,
                                                                 // In this case .substr(1) gives us the  portion of each word after the first character of "strAr[f]" array value.
 }
+
 let capitalStr = strAr.join(" ");                               // we used join to convert the array again in sentence or string.
 
 // console.log(capitalStr)
