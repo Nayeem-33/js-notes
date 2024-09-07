@@ -37,7 +37,7 @@ function make_avg(nums) {
     for(const num of nums){
         sum = sum + num;
     }
-    let avg = (sum/ nums.length).toFixed(2);
+    let avg = (sum/ nums.length).toFixed(2);    // .toFixed is used for limiting the decimal.
 
     return avg
 }
@@ -51,6 +51,31 @@ let sum = make_avg([14,55,74,45,59,56,89,96,32,36,65,4,75,58,47,62])
 
 // Task-4 = Write a function called count_zero() which will take a binary string (Binary string is a string which is consist of only 0 and 1) as parameter and count how many 0’s are there in that string.
 
-let b = '0110100010001000111000'
+function count_zero(binaryString) {
+    let zero = [];
+    for(const num of binaryString) {
+        if(num === "0"){
+            zero.push(num)
+        }
+    }
+    return zero.length;
+}
+
+let zero = count_zero('011010001000112140101010101010101011001001000111000')
+// console.log(zero)
 
 
+
+
+// Task 5 = Write a function called odd_even() which takes an integer value and tells whether this value is even or odd. If even return Even. If odd return Odd
+
+function odd_even(numBur) {
+    if(numBur % 2 !== 0) {
+        return "odd";
+    } else {
+        return "even";
+    }
+}
+
+let numBur = odd_even(40);
+console.log(numBur)
