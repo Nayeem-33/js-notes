@@ -48,7 +48,7 @@ function countVowels (string) {                     // initial String
     return vowelBox.length;                         // returning the .length of vowel box which will count all the number.
 }
 
-let findVowel = countVowels("amar babu vaat khai humairah porte jai O humairah kothai jas biler dhare katbo gash");
+let findVowel = countVowels("amar babu vaat khai");
 
 // console.log(findVowel)
 
@@ -96,9 +96,7 @@ let randomnum = randomNum(10, 20);
 
 function randomNum (bet, ween) {
 
-    let randomNUM = Math.floor(Math.random() * 20);     // Formula of random number "Math.floor(Math.random() * (max - min + 1) + min)"
-                                                                            // this is only for between numbers like 20 to 30, 40 to 80
-                                                                            // otherwise Math.floor(Math.random() * 20 (or the number you want till like 1-20 1-30)
+    let randomNUM = Math.floor(Math.random() * 20);     // Formula of random number "Math.floor(Math.random() * 20 (or the number you want till like 1-20 1-30)"
 
     return randomNUM;
 }
