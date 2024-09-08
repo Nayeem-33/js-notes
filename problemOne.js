@@ -60,7 +60,7 @@ let findVowel = countVowels("amar babu vaat khai");
 
 function longestWord (string) {
     let strArr = string.split(' ');
-    let maxWord = 'a';
+    let maxWord = string[0];
 
     for (const word of strArr){
         if (word.length > maxWord.length){
@@ -71,7 +71,7 @@ function longestWord (string) {
 }
 
 let sentence = longestWord ("I am learning Programming to become a programmer");
-//console.log(sentence);
+console.log(sentence);
 
 
 
