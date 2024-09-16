@@ -7,7 +7,7 @@ const colors = {
     "golden rod": '#daa520'
 };
 
-console.log(colors["golden rod"])
+// console.log(colors["golden rod"])
 
 
 
@@ -22,7 +22,7 @@ const car = {
 
 car.passenger = 5;
 
-console.log(car)
+// console.log(car)
 
 
 
@@ -39,7 +39,7 @@ const student = {
     }
 };
 
-console.log(student.physics.marks)
+// console.log(student.physics.marks)
 
 
 
@@ -53,7 +53,7 @@ let studentP = {
     isStudent: true
 };
 
-console.log(Object.keys(studentP).length)
+// console.log(Object.keys(studentP).length)
 
 
 
@@ -64,23 +64,44 @@ for (let key in studentP) {
     }
 }
 
-console.log(count);
+// console.log(count);
 
 
 
 
 // Task-5 (Hard) = Loop through an object and print the key-value pairs with their types
 
-let myObject = {
+let myObject = {name: 'John Doe', age: 25, city: 'Example City', isStudent: true};
 
-name: 'John Doe',
-age: 25,
-city: 'Example City',
-isStudent: true
-};
-
+for (const porp in myObject) {
+    // console.log("key:", porp,"|", "type:", typeof myObject[porp]);
+}
 // Output:
 // key: name | type:  string
 // key: age | type:  number
 // key: city | type:  string
 // key: isStudent | type:  boolean
+
+
+
+
+
+
+
+
+// ChatGPT Tasks
+
+const person = {name: 'Hanif Ahmed', Age: 28, Sex: 'Male', Married: true,}
+
+console.log(person.name)
+
+person.Email = 'hanif@mail.com'
+person.Age = 35
+
+console.log(person)
+// console.log(greet(person.name))
+
+
+const hanifAge = person.Age;
+
+console.log(hanifAge)
