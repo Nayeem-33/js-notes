@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change a element</title>
+</head>
+<body>
+    <div>
+        <h1>Change the Text by Button</h1>
+        <p id="text-1">I am a text i will be changed by the button below</p>
+        <button id="btn-1">I am a button i can change the text above</button>
+    </div>
+    <script>
+        document.getElementById('btn-1').addEventListener('click', function(){ // We have selected the button to add event listener. we added a click event and a embedded function.
+            document.getElementById('text-1').innerText = "I an a changed text now and my color is red" // we have selected the p tag's inner text and set new value. this value will be changed after the event is initiated.
+            document.getElementById('text-1').style.color = 'red' // we aso have changes the color.
+
+        })
+    </script>
+    <div>
+        <h1>Display Your Name</h1>
+
+        <p>Hello! my name is <span id="name-display"></span></p> <!-- In the span tag will will put the name -->
+        <input type="text" id="name-input"> <!-- Here the user will write there name -->
+        <button id="update-btn">Update</button>
+    </div>
+    <script>
+        let name = document.getElementById('name-display') // We have selected the SPAN tag by the id and kept it on a let variable.
+        const newName = document.getElementById('name-input') // We have selected the INPUT tag by the id and kept it on a const variable.
+        document.getElementById('update-btn').addEventListener('click', function(){ // we have added a event listener on the button when the button will be clicked the function will start working.
+            name.innerText = newName.value; // first it will set a new value for the inner text it will change the SPAN tag's innerTest to the New Value from the Input box which will be typed by the user in the input box.
+            newName.value = ''; // after the work done it will clear the the box for the next user to enter his name. basically, it will set a new empty value which is represented by empty string.
+        })
+    </script>
+    <div>
+        <h1>Add Your comment</h1>
+        <div id="comment-display" style="width: 500px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quod tempora rerum sit, nobis expedita quo optio temporibus quos modi.</p>
+            <p>Voluptates ab repudiandae non ad architecto neque? Quibusdam molestias sequi, magni esse dolore cumque, possimus similique unde velit, tenetur magnam?</p>
+            <p>Molestiae illo maiores ex. In harum a repudiandae, minima ratione excepturi quod quisquam nemo ab fugit ad hic aliquid rerum!</p>
+            <p>Voluptas vitae iure placeat distinctio numquam consequatur, aperiam iusto ducimus itaque laboriosam mollitia error voluptatibus sint officia possimus reprehenderit fugiat.</p>
+            <p>Alias reprehenderit quam omnis qui quaerat voluptates nobis error nulla similique nam eius aut, repellendus magni id debitis harum aliquam!</p>
+        </div>
+        <br>
+        <textarea  name="" id="comment-box" style="width: 450px;"></textarea><br>
+        <button id="post-comment">Post Your Comment</button>
+    </div>
+    <script>
+        document.getElementById('post-comment').addEventListener('click', function(){
+        const commentBox = document.getElementById('comment-box')
+        const newComment = commentBox.value;
+        const commentContainer = document.getElementById('comment-display');
+        const newP = document.createElement('p');
+        newP.innerText = newComment;
+        commentContainer.appendChild(newP);
+        commentBox.value = '';
+        })
+    </script>
+    <div>
+        <h1>Confirm to Delete</h1>
+        <p>Are you sure?</p>
+        <p>Type 'YES I AM' to delete</p>
+        <input type="text" id="confirm-input">
+        <button id="confirm-btn" disabled>Delete</button>
+    </div>
+    <script>
+        document.getElementById('confirm-input').addEventListener('keyup', function(event){
+            const confirmText = event.target.value;
+            if(confirmText === 'YES I AM') {
+                document.getElementById('confirm-btn').removeAttribute('disabled')
+            } else {
+                document.getElementById('confirm-btn').setAttribute('disabled', true)
+            }
+        })
+    </script>
+</body>
+</html>
