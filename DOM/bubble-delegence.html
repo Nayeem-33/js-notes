@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="body">
+    <div id="div-ul">
+      <h1>Event bubble and stopPropagation, stopImmediatePropagation</h1>
+      <ul id="list-ul">
+        <li id="list-1">Lorem, ipsum dolor.</li>
+        <li id="list-2">Minima, optio eum.</li>
+        <li id="list-3">Quaerat, natus magni?</li>
+        <li id="list-4">Temporibus, eius fugit.</li>
+        <li id="list-5">Sequi, iste sapiente.</li>
+        <li id="list-6">Delectus, optio a.</li>
+      </ul>
+      <button id="ul-btn">UL BTN</button>
+    </div>
+    <script>
+      document
+        .getElementById("list-2")
+        .addEventListener("click", function (event) {
+          console.log("Li-2 Clicked");
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("list-ul")
+        .addEventListener("click", function (event) {
+          console.log("Ul Clicked");
+          event.stopImmediatePropagation();
+        });
+      document
+        .getElementById("div-ul")
+        .addEventListener("click", function (event) {
+          console.log("Div Clicked");
+        });
+      document
+        .getElementById("body")
+        .addEventListener("click", function (event) {
+          console.log("Body Clicked");
+        });
+      document
+        .getElementById("ul-btn")
+        .addEventListener("click", function (event) {
+          console.log("BTN Clicked");
+          event.stopPropagation();
+        });
+    </script>
+
+    <h1>NOTES</h1>
+    <p>
+      <strong>stopPropagation:</strong> <br />
+      <br />
+      <strong>Purpose: </strong>Prevents the event from bubbling up to parent
+      elements, but it does not prevent other event listeners on the same
+      element from running. <br />
+      <br />
+      <strong>Effect: </strong>The event will not trigger any further listeners
+      on ancestor elements but will continue to execute other listeners attached
+      to the same element.
+    </p>
+    <p>
+      <strong>stopImmediatePropagation:</strong> <br />
+      <br />
+      <strong>Purpose: </strong>Stops the event from bubbling up to parent
+      elements and also prevents any other event listeners on the same element
+      from running. <br />
+      <br />
+      <strong>Effect: </strong>Effect: The event will not bubble up, and no
+      further listeners on the current element will be triggered.
+    </p>
+    <div id="parent" style="padding: 20px; background-color: lightblue">
+      Parent Div
+      <button id="child">Click Me</button>
+    </div>
+
+    <script>
+      // Parent element listener
+      document.getElementById("parent").addEventListener("click", function () {
+        console.log("Parent element clicked!");
+      });
+
+      // First listener on child button
+      document
+        .getElementById("child")
+        .addEventListener("click", function (event) {
+          console.log("First button listener executed");
+
+          //   event.stopPropagation(); // Prevents bubbling up to the parent
+
+          //   event.stopImmediatePropagation(); // Prevents all the event listener
+        });
+
+      // Second listener on child button
+      document.getElementById("child").addEventListener("click", function () {
+        console.log("Second button listener executed");
+      });
+    </script>
+  </body>
+</html>
