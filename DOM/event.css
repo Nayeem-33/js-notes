@@ -1,0 +1,27 @@
+.display-box {
+    width: 700px;
+    margin: 0 auto;
+    background-color: rgb(171, 255, 171);
+    padding: 20px;
+    border-radius: 16px;
+    border: 5px solid rgb(0, 168, 56);
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#form-div {
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 6px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 16px;
+    border: 5px solid rgb(0, 168, 168);
+    color: skyblue;
+}

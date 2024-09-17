@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <div>
+        <h1>Button Box Five Ways of Click Event</h1>
+        
+        <!-- Explanation: Line no 1 - 7 in event.js -->
+        <button onclick="document.body.style.backgroundColor = 'yellow'">By Adding HTML onclick Attribute Directly on HTML</button>
+        <br><br><br>
+        <!-- Explanation: Line no 12 - 18 in event.js -->
+        <!-- Function: Line 14 - 16 in event.js -->
+        <button onclick="changeBgColor()">By Adding HTML onclick Attribute with Separate Function</button>
+        <br><br><br>
+        <!-- Explanation: Line no 23 - 37 in event.js -->
+        <!-- Function: Line 25 - 31 in event.js -->
+        <button id="btn-1">By Using JS .onclick Property and Separate Function</button>
+        <br><br><br>
+        <!-- Explanation: Line no 42 - 50 in event.js -->
+        <!-- Function: Line 44 - 48 in event.js -->
+        <button id="btn-2">By Using JS .onclick Property and Direct Function</button>
+        <br><br><br>
+        <!-- Explanation: Line no 55 - 69 in event.js -->
+        <!-- Function: Line 57 - 63 in event.js -->
+        <button id="btn-3">By Using JS .addEventListener Method and Separate Function</button>
+        <br><br><br>
+        <!-- Explanation: Line no 74 - 81 in event.js -->
+        <!-- Function: Line 76 - 79 in event.js -->
+        <button id="btn-4">By Using JS .addEventListener Method and Embedded Function</button>
+        <br><br><br>
+        <!-- Explanation: Line no 86 - 81 in event.js -->
+        <!-- Function: Line 88 - 90 in event.js -->
+        <button id="btn-final">By Using JS .addEventListener Method and Embedded Function (without variable)</button>
+
+    </div>
+    <br><br><br><br><br><br>
+    <div class="display-box">
+ <h2>Welcome</h2>
+    </div>
+    <div id="form-div">
+
+        <h1 class="form-head">Fill this form</h1>
+
+        <input id="name-box" type="text" placeholder="Your Name Here">
+
+        <button id="button">Submit</button>
+
+    </div>
+
+    <script src="event.js"></script>
+</body>
+</html>
