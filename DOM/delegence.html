@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <ul id="ul-container">
+        <li class="items">Alias, repellat obcaecati.</li>
+        <li class="items">Lorem, ipsum dolor.</li>
+        <li class="items">Unde, vero cumque!</li>
+        <li class="items">Natus, obcaecati assumenda.</li>
+        <li class="items">Deserunt, a iste.</li>
+        <li class="items">Asperiores, facilis consectetur.</li>
+      </ul>
+      <input id="new-li" type="text" />
+      <button id="push-btn">Push text</button>
+    </div>
+    <script>
+      // This method is only for removing existing items
+      // const items = document.getElementsById('items');
+      // for(const item of items) {
+      //     item.addEventListener('click', function(event){
+      //         // ulContainer.removeChild(event.target) //This
+      //         event.target.parentNode.removeChild(event.target)  // And This both are same: this means event as we know event argument has all the info os eventListener .target is the clicked element or the li we have clicked. .parentNode is the Parent Element of the Li which is eventually the var = ulContainer id = ul-container.
+      //     })
+      // }
+
+
+    //   Adding new items
+      const liBox = document.getElementById("new-li"); // selected the input box with new-li id.
+      const ulContainer = document.getElementById("ul-container"); // identified  the ul container with new-li id.
+
+      document
+        .getElementById("push-btn")
+        .addEventListener("click", function () {
+          // added event listener to the button id push-btn
+          let newLi = document.createElement("li"); // created a new li
+          newLi.setAttribute("class", "items"); // Set Li Attribute
+          newLi.innerText = liBox.value; // Set Inner text to Input by the user which The value of input box id new-li
+
+          ulContainer.appendChild(newLi); // append the newly created li to the Defined Ul container.
+          liBox.value = ""; // set the input box value '' empty string for the next input.
+        });
+
+        // Removing all including existing and new
+        document.getElementById('ul-container').addEventListener('click', function(event){
+            event.target.parentNode.removeChild(event.target)
+        })
+        
+    </script>
+  </body>
+</html>
