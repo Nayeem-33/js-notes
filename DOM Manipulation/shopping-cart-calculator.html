@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart Calculator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-lg w-1/2">
+      <h1 class="text-3xl font-bold mb-6">Shopping Cart</h1>
+      <div class="flex justify-between gap-5" id="productInput">
+        <input
+          type="text"
+          class="text-left border p-2 w-full"
+          placeholder="Item Name"
+          name=""
+          id="itemName"
+        />
+
+        <input
+          type="number"
+          class="text-center border p-2 w-24"
+          placeholder="Quantity"
+          name=""
+          id="itemQty"
+        />
+
+        <input
+          type="number"
+          class="border p-2 w-28 text-right"
+          placeholder="Price"
+          name=""
+          id="itemPrice"
+        />
+
+        <button
+          id="addToCart"
+          class="bg-blue-500 text-white px-4 py-2 rounded w-56"
+        >
+          Add To Cart
+        </button>
+      </div>
+
+      <div class="flex justify-between font-bold py-5">
+        <p class="text-left w-full">Item Name</p>
+        <p class="text-right w-24">Quantity</p>
+        <p class="text-right w-28">Price</p>
+        <p class="text-right w-28">Total</p>
+      </div>
+
+      <ul id="productList" class="space-y-4">
+
+      </ul>
+      <div class="mt-6">
+        <h2 class="text-xl font-bold">
+          Total: $<span id="totalPriceF">0</span>
+        </h2>
+      </div>
+    </div>
+    <script src="shopping-cart-calculator.js"></script>
+  </body>
+</html>
