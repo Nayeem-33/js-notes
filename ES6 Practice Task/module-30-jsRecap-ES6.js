@@ -84,11 +84,11 @@ console.log(maxOfArr(arr1, arr2));
 // .map() is great when you want to transform data and get a new array, making it useful for functional programming approaches.
 
 // Example of .forEach()
-const numbers = [1, 2, 3, 4];
+const numbersss = [1, 2, 3, 4];
 let sum = 0;
 
 // Using .forEach to log and modify sum
-numbers.forEach(num => {
+numbersss.forEach(num => {
   console.log(num); // Side effect: logging
   sum += num;       // Side effect: updating sum
 });
@@ -96,10 +96,10 @@ numbers.forEach(num => {
 console.log('Sum:', sum);  // Output: 10
 
 // Example of .map()
-const numbers = [1, 2, 3, 4];
+const numberss = [1, 2, 3, 4];
 
 // Using .map to transform numbers
-const doubledNumbers = numbers.map(num => num * 2);
+const doubledNumbers = numberss.map(num => num * 2);
 
 console.log(doubledNumbers);  // Output: [2, 4, 6, 8]
 
@@ -153,3 +153,78 @@ console.log(evenNumbers);  // Output: [2, 4, 6]
 const firstEven = numbers.find(num => num % 2 === 0);
 
 console.log(firstEven);  // Output: 2
+
+
+const arrIX =  [14,40,50,17,95,63,24,70,96,90,30,78,85,23]
+// ! Filter the Array
+
+let arrIXFilter = arrIX.filter(arr => arr%10 ===0)
+// console.log("search with filter: ", arrIXFilter)
+
+let arrIXFind = arrIX.find(arr => arr%10 ===0)
+// console.log("search with find: ", arrIXFind)
+
+
+// Practice problem .filter()
+const employee = [
+    { name: 'Alice', position: 'Software Engineer' },
+    { name: 'Bob', position: 'Project Manager' },
+    { name: 'Charlie', position: 'Software Engineer' },
+    { name: 'David', position: 'Designer' },
+    { name: 'Eve', position: 'Software Engineer' },
+    { name: 'Frank', position: 'Project Manager' },
+    { name: 'Grace', position: 'Data Scientist' },
+  ];
+
+  let allSoftEng = employee.filter(employ => employ.position === 'Software Engineer')
+//   console.log(allSoftEng)
+
+  let softEng = employee.find(employ => employ.position === 'Software Engineer')
+//   console.log(softEng)
+
+
+// reduce
+const person = [
+    { name: 'John', age: 28 },
+    { name: 'Emma', age: 22 },
+    { name: 'Michael', age: 35 },
+    { name: 'Sophia', age: 30 },
+    { name: 'David', age: 40 },
+    { name: 'Olivia', age: 25 },
+    { name: 'James', age: 19 },
+  ];
+
+  let age = 0
+  for(per of person){
+    let newAge = per.age
+    age = age+newAge
+  }
+  console.log(age)
+
+
+// reduce
+
+const numberssss = [1, 2, 3, 4];
+
+const total = numberssss.reduce((accumulator, currentValue) => {
+  return accumulator + currentValue;
+}, 0); // 0 is the starting value of accumulator
+
+// console.log(total);  // Output: 10
+
+// Practice Problem reduce()
+const totalAgeReduce = person.reduce((sum, per) => {
+    return sum + per.age
+}, 0)
+console.log (totalAgeReduce)
+
+// SYNTEX
+array.reduce(function(accumulator, /* the initial value or sum of last work */ currentValue /* the current value of array */, currentIndex /* current index of element (optional) */, array /* the whole arrey(optional)*/) {
+    // return the updated accumulator
+  }, initialValue /* if we want to set the initial value here (optional) */);
+
+
+// .reduce() vs .map() or .forEach():
+// .reduce() accumulates a value over multiple iterations and returns a single result.
+// .map() returns a new array by transforming each element.
+// .forEach() executes a function on each array element but returns undefined.
